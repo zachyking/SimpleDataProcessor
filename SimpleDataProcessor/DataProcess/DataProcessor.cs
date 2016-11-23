@@ -37,7 +37,7 @@ namespace SimpleDataProcessor.DataProcess
                 string[] words = txt.Split(charsToSplit);
 
                 //zoradenie stringov
-                IEnumerable<string> query = from word in words.Where(x => x.Length > 2)
+                IEnumerable<string> query = from word in words.Where(x => x.Length >= 2)
                                             orderby word.Substring(0, 1) descending
                                             select word;
 
